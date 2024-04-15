@@ -19,5 +19,5 @@ df = get_qs_ranking_data(subject='engineering-technology', full_view=True)
 
 2. Running as a script:
 ```python
-python qs_ranking_crawler.py
+python qs_ranking_crawler.py --subject='engineering-technology' --full-view      
 ```
