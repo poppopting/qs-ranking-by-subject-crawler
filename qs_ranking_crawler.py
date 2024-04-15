@@ -96,7 +96,7 @@ if __name__ == '__main__':
   
   # display settings 
   parser.add_argument('--page', default='', help='Page Number')
-  parser.add_argument('--items_per_page', default='15', help='Item per page')
+  parser.add_argument('--items_per_page', default='100', help='Item per page')
   parser.add_argument('--cities', default='', help='Specify location of universities')
   parser.add_argument('--search', default='', help='Search specific university')
   parser.add_argument('--star', default='', help='Not explore yet')
