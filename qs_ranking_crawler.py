@@ -92,7 +92,7 @@ if __name__ == '__main__':
   parser.add_argument('--subject', default='data-science-artificial-intelligence', help='The subject for which you want to retrieve rankings.')
   parser.add_argument('--region', default='North America', help='Specify region for filtering rankings.')
   parser.add_argument('--countries', default='us,ca', help='Specify countries for filtering rankings.')
-  parser.add_argument('--full-view', action='store_true', help='Whether to retrieve full view data, including indicator details.')
+  parser.add_argument('--full_view', action='store_true', help='Whether to retrieve full view data, including indicator details.')
   
   # display settings 
   parser.add_argument('--page', default='', help='Page Number')
