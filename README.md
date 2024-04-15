@@ -24,6 +24,7 @@ python qs_ranking_crawler.py --subject='engineering-technology' --full-view
 
 ## Result
 1. Under Quick-View (without --full-view)
+   
 |      city      |     country    | overall_score | rank | rank_display |   region    |                                        title                                       |
 |:--------------:|:--------------:|:-------------:|:----:|:------------:|:-----------:|:----------------------------------------------------------------------------------:|
 |   Cambridge    | United States  |      96.8     |  1   |      1       | North America |                               Massachusetts Institute of Technology (MIT)                                |
@@ -31,8 +32,10 @@ python qs_ranking_crawler.py --subject='engineering-technology' --full-view
 |    Berkeley    | United States  |      92.2     |  5   |      5       | North America |                          University of California, Berkeley (UCB)                          |
 |   Cambridge    | United States  |      89.8     |  8   |      8       | North America |                                            Harvard University                                            |
 |   Pasadena     | United States  |      88.8     |  9   |      9       | North America |                            California Institute of Technology (Caltech)                           |
+              |
  
 2. Under Full-View (with --full-view)
+   
 | Academic Reputation Score | Citations per Paper Score | Employer Reputation Score | H-index Citations Score | International Research Network Score | city      | country       | overall_score | rank | rank_display | region       | title                                     |
 |--------------------------|---------------------------|---------------------------|-------------------------|---------------------------------------|-----------|---------------|---------------|------|--------------|--------------|-------------------------------------------|
 | 100                      | 96.2                      | 97.9                      | 96                      | 81.9                                  | Cambridge | United States | 96.8          | 1    | 1            | North America | Massachusetts Institute of Technology (MIT) |
