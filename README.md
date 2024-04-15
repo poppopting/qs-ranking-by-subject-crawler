@@ -24,7 +24,7 @@ python qs_ranking_crawler.py --subject='engineering-technology' --full-view
 
 ## Result
 1. Under Quick-View (without --full-view)
- |      city      |     country    | overall_score | rank | rank_display |   region    |                                        title                                       |
+|      city      |     country    | overall_score | rank | rank_display |   region    |                                        title                                       |
 |:--------------:|:--------------:|:-------------:|:----:|:------------:|:-----------:|:----------------------------------------------------------------------------------:|
 |   Cambridge    | United States  |      96.8     |  1   |      1       | North America |                               Massachusetts Institute of Technology (MIT)                                |
 |    Stanford    | United States  |      93.8     |  2   |      2       | North America |                                        Stanford University                                        |
