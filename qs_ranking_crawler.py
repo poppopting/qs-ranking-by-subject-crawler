@@ -60,7 +60,7 @@ def get_qs_ranking_data(subject='engineering-technology', full_view=False, **kwa
   query_info = {
       'nid': subject_nid,
       'page': kwargs.get('page', ''),
-      'items_per_page': kwargs.get('items_per_page', '15'),
+      'items_per_page': kwargs.get('items_per_page', '100'),
       'tab': 'indicators' if full_view else '',
       'region': kwargs.get('region', ''),
       'countries': kwargs.get('countries', ''),  # please use country code aplha-2 code, ex:us, ca. Ref:https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
