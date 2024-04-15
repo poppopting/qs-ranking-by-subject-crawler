@@ -5,9 +5,19 @@ This Python web scraping tool allows users to retrieve subject ranking data from
 
 
 ## Usage
+This tool can be used in two ways:
+
+1. Importing as a module:
+
 ```python
 # Import the scraper module
-from qs_scraper import get_qs_ranking_data
+from qs_ranking_crawler import get_qs_ranking_data
 
 # Retrieve QS ranking data for Engineering & Technology subject
 df = get_qs_ranking_data(subject='engineering-technology', full_view=True)
+```
+
+2. Running as a script:
+```python
+python qs_ranking_crawler.py
+```
