@@ -86,13 +86,28 @@ def get_qs_ranking_data(subject='engineering-technology', full_view=False, **kwa
 
 
 if __name__ == '__main__':
+  import argparse
 
-    SUBJECT = 'data-science-artificial-intelligence'
-    REGION = 'North America'
-    COUNTRIES = 'us,ca'
-    FULL_VIEW = False
+  parser = argparse.ArgumentParser(description="QS University Rankings Scraper")
+  parser.add_argument('--subject', default='data-science-artificial-intelligence', help='The subject for which you want to retrieve rankings.')
+  parser.add_argument('--region', default='North America', help='Specify region for filtering rankings.')
+  parser.add_argument('--countries', default='us,ca', help='Specify countries for filtering rankings.')
+  parser.add_argument('--full-view', action='store_true', help='Whether to retrieve full view data, including indicator details.')
+  
+  # display settings 
+  parser.add_argument('--page', default='', help='Page Number')
+  parser.add_argument('--items_per_page', default='15', help='Item per page')
+  parser.add_argument('--cities', default='', help='Specify location of universities')
+  parser.add_argument('--search', default='', help='Search specific university')
+  parser.add_argument('--star', default='', help='Not explore yet')
+  parser.add_argument('--sort_by', default='overallscore', help='Specify index for sorting ')
+  parser.add_argument('--order_by', default='asc', help='Specify whether to use ascending or descening on query results')
+  parser.add_argument('--program_type', default='Not explore yet')
+    
+  args = parser.parse_args()
+  kwargs = vars(args)
 
-    df = get_qs_ranking_data(subject=SUBJECT, region=REGION, countries=COUNTRIES, full_view=FULL_VIEW)
-    unrelated_cols = ['score_nid', 'nid', 'advanced_profile', 'core_id', 'path', 'logo', 'stars', 'dagger', 'redact']
-    df = df[df.columns.difference(unrelated_cols)]
-    df.to_csv('{0}-{1}-{2}.csv'.format(SUBJECT, REGION, COUNTRIES.replace(',', '')), index=False)
+  df = get_qs_ranking_data(**kwargs)
+  unrelated_cols = ['score_nid', 'nid', 'advanced_profile', 'core_id', 'path', 'logo', 'stars', 'dagger', 'redact']
+  df = df[df.columns.difference(unrelated_cols)]
+  df.to_csv('{0}-{1}-{2}.csv'.format(args.subject, args.region, args.countries), index=False)
