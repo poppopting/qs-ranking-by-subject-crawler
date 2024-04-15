@@ -1,4 +1,4 @@
-# QS World University Rankings by Subject 2024 Cralwer
+# 2024 QS World University Rankings by Subject Crawler
 
 ## Introduction
 This Python web scraping tool allows users to retrieve subject ranking data from the QS World University Rankings website without the need for using Selenium. It offers flexibility in specifying subjects and provides options for fetching comprehensive ranking data, including detailed indicator information.
